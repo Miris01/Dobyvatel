@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dobyvatel – online hra</title>
+<meta name="description" content="Dobyvatel – starověká online hra typu quiz. Hraj s kamarády online.">
+<meta name="keywords" content="Dobyvatel, hra, online, multiplayer, quiz, starověké">
+<meta name="author" content="TvůjNick">
+<link rel="stylesheet" href="style.css">
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<h1 id="title">DOBYVATEL</h1>
+
+<div class="username-box">
+    <label for="username">Tvoje jméno:</label>
+    <input type="text" id="username" placeholder="Zadej jméno">
+</div>
+
+<div class="menu">
+    <button id="create-room">Vytvořit místnost</button>
+    <button id="join-room">Připojit se k místnosti</button>
+    <button id="settings">Nastavení</button>
+</div>
+
+<div id="overlay" class="hidden"></div>
+
+<!-- Lobby panel -->
+<div id="lobby-panel" class="hidden">
+    <h2 id="lobby-title">LOBBY</h2>
+    <p id="room-code" class="clickable"></p>
+    <p id="player-list"></p>
+    <div class="lobby-buttons">
+        <button id="start-game">Spustit hru</button>
+        <button id="leave-room">Opustit </button>
+    </div>
+</div>
+
+<!-- Připojit se k místnosti -->
+<div id="join-panel" class="hidden">
+    <h2 id="join-title">Zadejte kód místnosti</h2>
+    <input type="text" id="join-code" placeholder="Kód místnosti">
+    <button id="confirm-join">Připojit se</button>
+    <button id="cancel-join">Opustit</button>
+</div>
+
+<!-- Nastavení -->
+<div id="settings-panel" class="hidden">
+    <h2>Nastavení</h2>
+    <label>Hlasitost hudby:
+        <input type="range" id="music-volume" min="0" max="100" value="50">
+    </label><br><br>
+    <label>Hlasitost hry:
+        <input type="range" id="game-volume" min="0" max="100" value="50">
+    </label><br><br>
+    <button id="close-settings">Zavřít</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

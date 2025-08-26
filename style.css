@@ -1,0 +1,185 @@
+body {
+    font-family: "Garamond", serif;
+    background: linear-gradient(to bottom, #4d3c2f, #8c6a4b);
+    color: #f5f0e1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* DOBYVATEL úplně nahoře */
+h1#title {
+    font-size: 60px;
+    margin: 20px 0 40px 0;
+    text-shadow: 2px 2px #2d1f10;
+}
+
+/* Wrapper pro zbytek obsahu (menu, username) */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Box se jménem */
+.username-box {
+    background-color: #7b5e3c;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    padding: 25px;
+    box-shadow: 4px 4px 15px #2d1f10;
+    margin: 10px 0 50px 0; /* víc místa od tlačítek */
+    font-size: 22px; /* větší text pro jméno */
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Menu tlačítka */
+.menu {
+    background-color: #7b5e3c;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    padding: 25px;
+    box-shadow: 4px 4px 15px #2d1f10;
+    margin: 100px 0 10px 0; /* POSUNUTÍ VÍC DOLŮ */
+}
+
+.menu button, #lobby-panel button, #join-panel button, #settings-panel button {
+    padding: 20px 40px;
+    margin: 20px 0;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #a3784a;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #c69c6d;
+    transform: scale(1.05);
+}
+
+/* Skrytí panelů */
+.hidden {
+    display: none !important;
+}
+
+input[type="text"], input[type="range"] {
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 5;
+}
+
+/* Join panel */
+#join-panel {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    z-index: 10;
+    width: 450px;
+    padding: 30px;
+    background-color: #7b5e3c;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px #2d1f10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Lobby panel */
+#lobby-panel {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    z-index: 10;
+    width: 450px;
+    padding: 30px;
+    background-color: #7b5e3c;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px #2d1f10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tituly */
+#lobby-title {
+    font-size: 45px;
+    margin-top: -15px;   /* posune název trochu nahoru */
+    margin-bottom: 25px; /* mezera pod názvem zůstává */
+}
+
+
+#room-code.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 20px; 
+    margin-bottom: 15px;
+}
+
+#player-list {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Lobby tlačítka dole */
+.lobby-buttons {
+    display: flex;
+    width: 100%; /* zabírá celý panel */
+    margin-top: 20px;
+    margin-bottom: 0;
+    gap: 20px; /* mezera mezi tlačítky */
+}
+
+.lobby-buttons button {
+    flex: 1;       /* tlačítka se roztáhnou rovnoměrně */
+    min-width: 0;  /* důležité, aby flex fungoval i s gap */
+    padding: 9px 0; 
+    font-size: 14px;
+}
+
+/* Join panel obsah */
+#join-panel input, #join-panel button {
+    display: block;
+    margin: 15px auto;
+    font-size: 18px;
+    padding: 12px 25px;
+}
+
+/* Settings panel */
+#settings-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 450px;
+    padding: 30px;
+    background-color: #7b5e3c;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px #2d1f10;
+}
